@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://localhost:*; script-src 'self' http://localhost:*">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self' http://localhost:*; script-src 'self' http://localhost:*">
+    <title>Author Loki</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+  </head>
+  <body>
+    <!-- Controls -->
+    <!-- input form -->
+    <h1>Original Content</h1>
+    <div >
+      <div class="">
+        <label id="spelling_error_input_label" class="visually-hidden" for="post_input">Fix spelling errors</label>
+        <div class="form-control post_input" id="post_input" contenteditable="true"></div>
+      </div>
+      
+      <div>
+        <button id="process" class="btn btn-primary">Process</button>
+        <button id="spell_check" class="btn btn-danger">Spell Check</button>
+      </div>
+    </div>
+    
+    <h1>Mitigated Content</h1>
+    <p>Translated english -> spanish -> french -> english</p>
+    <div class="">
+        <label id="spelling_error_input_label" class="visually-hidden" for="post_input">Fix spelling errors</label>
+        <div class="form-control post_input" id="post_output" contenteditable="true"></div>
+    </div>
+    <script src="renderer.js"></script>
+    <script src="process.js"></script>
+  </body>
+</html>
